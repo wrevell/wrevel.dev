@@ -1,11 +1,140 @@
-body {
-  background-color: #181825;
-  color: #FFFFFF;
-  font-size: 24px;
-  text-align: center;
-  font-family: Courier New;
+html {
+  margin-left: 5%;
+  margin-right: 5%;
+  min-height: 100%;
 }
 
-p {
-  font-size: 28px;
+body {
+  height: 100%;
+  font-family: Roboto Mono;
+  color: #cdd6f4;
+  text-align: center;
+  background: radial-gradient(#1e1e2e, #11111b);
+  background-attachment: fixed;
+  background-size: 100%;
+  font-size: 24px;
+}
+
+hr {
+  background: linear-gradient(to right, #f5c2e7, #f38ba8, #f5c2e7, #f5c2e7);
+  background-size: 300%;
+  border: 0;
+  height: 3px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 9px #f5c2e7;
+  animation: hr 2s cubic-bezier(0.268, 0.018, 0, 0.987) forwards;
+}
+
+#greeting {
+  animation: fadein 2s cubic-bezier(0.268, 0.018, 0, 0.987) forwards;
+}
+
+#todolist {
+  background: linear-gradient(to right, #313244, #45475a, #313244, #45475a);
+  margin-bottom: 20px;
+  margin-top: 60px;
+  border-radius: 15px;
+  border-width: 1px;
+  background-size: 200%;
+  text-shadow: 0px 0px 8px #181825;
+  box-shadow: 0px 15px 9px #181825;
+}
+
+#aboutme {
+  margin-bottom: 45px;
+  animation: fadein 2s cubic-bezier(0.159, 0.012, 0, 0.987) both 0.4s;
+}
+
+#scrollprompt {
+  margin-top: 15%;
+  animation: fadein2 1s cubic-bezier(0.159, 0.012, 0, 0.987) both 3s;
+}
+
+#downarrow {
+  margin-bottom: 25%;
+  animation: downarrow 3s cubic-bezier(0.191, 1.368, 0.212, 0.982) both 3.2s;
+}
+
+ul {
+  margin-bottom: 10%;
+  margin-left: 15%;
+  text-align: left;
+  text-shadow: 0px 0px 7px darkgray;
+}
+
+#imglogo {
+  filter: drop-shadow(0px 0px 6px #f5c2e7);
+}
+
+#hai {
+  animation: fadein2 1.5s both;
+}
+
+#blobwave {
+  filter: drop-shadow(0px 15px 8px #11111b);
+  margin-bottom: 20px;
+  animation: fadein2 1.5s both 0.2s;
+}
+
+.inview {
+  animation: inview 1s forwards;
+}
+
+/* fixed keyframes */
+@keyframes inview {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hr {
+  from {
+    width: 0px;
+    background-position: 0%, 0%;
+    transform: translateY(20px);
+  }
+  to {
+    width: 75%;
+    background-position: 250%, 0%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    filter: blur(3px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein2 {
+  from {
+    filter: blur(3px);
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes downarrow {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px)
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
