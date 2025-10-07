@@ -80,7 +80,6 @@ ul {
   animation: inview 1s forwards;
 }
 
-/* fixed keyframes */
 @keyframes inview {
   0% {
     opacity: 0;
