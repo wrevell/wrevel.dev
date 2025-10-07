@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-  <html>
-  <body>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wrevel.dev</title>
-    <link href="https://wrevel.dev/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wrevel.dev</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <div class="style.css">
-  <script src="https://wrevel.dev/app.js"></script>
-<h1 id="hai">haiii! :3</h1><img id="blobwave" src="https://wrevel.dev/blobwave.png" height="100" width="100">
-<h3 id="greeting"><b>my name's wrevel, welcome to my funny site!</b></h3>
-<p id="aboutme">I'm a furry on the internet doing nerdy things for the sake of fun.<br>I listen to a lot of music, my favorite genres are uptempo, digital hardcore, metal & rock, etc.<br>
-<h4 id="scrollprompt"><i>scroll to see more...</i></h4>
-<h3 id="downarrow">↓</h3>
-<div id="entercontroller">
-<h3 id="todolist">to do list:</h3>
-<ul>
-    <li><b><i>transfer code from codepen to domain
-    <li>to be continued…</i></b>
-  </ul>
-<br>
-<img id="imglogo" src="https://wrevel.dev/logo2.png" width="110">
-</div>
+</head>
+
+<body>
+  <script src="app.js"></script>
+  <h1 id="hai">heyya! :3</h1><img id="blobwave" src="https://wrevel.dev/blobwave.png" height="100" width="100">
+  <hr>
+  <h3 id="greeting"><b>my name's wrevel, welcome to my funny site!</b></h3>
+  <p id="aboutme">I'm a furry on the internet doing nerdy things for the sake of fun. </p>
+  <h4 id="scrollprompt"><i>scroll to see more...</i></h4>
+  <h3 id="downarrow">↓</h3>
+  <div id="entercontroller">
+    <h3 id="extendedaboutme">more about me:</h3>
+    <p id="yap">i'm an unemployed teen who engages in myriad of hobbies!<br>
+      i spend most of my free-time at home learning about all kinds of cool tech things.<br>
+      i started taking coding more seriously pretty recently, the current state of the website you're looking at<br>
+      was made in less than a week with my very low experience level in web design/development.<br>
+      you can reach out to me whenever and i'll get back to you as soon as i can, and thanks for visiting wrevel.dev!
+    </p>
+    <br>
+    <img id="imglogo" src="https://wrevel.dev/logo2.png" width="110">
+  </div>
+
+  <div class="container">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+  </div>
+  <svg>
+    <filter id="noise">
+      <feTurbulence type="turbulence" baseFrequency="0.55" result="colorednoise" />
+      <feColorMatrix in="#noise" type="saturate" values="0" result="grayscalenoise"></feColorMatrix>
+    </filter>
+  </svg>
+
 </body>

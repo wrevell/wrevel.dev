@@ -2,9 +2,11 @@ html {
   margin-left: 5%;
   margin-right: 5%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   height: 100%;
   font-family: Roboto Mono;
   color: #cdd6f4;
@@ -12,7 +14,8 @@ body {
   background: radial-gradient(#1e1e2e, #11111b);
   background-attachment: fixed;
   background-size: 100%;
-  font-size: 24px;
+  font-size: 28px;
+  position: relative;
 }
 
 hr {
@@ -26,27 +29,29 @@ hr {
 }
 
 #greeting {
+  font-size: 38px;
   animation: fadein 2s cubic-bezier(0.268, 0.018, 0, 0.987) forwards;
 }
 
-#todolist {
+#extendedaboutme {
   background: linear-gradient(to right, #313244, #45475a, #313244, #45475a);
   margin-bottom: 20px;
   margin-top: 60px;
   border-radius: 15px;
-  border-width: 1px;
+  border-width: 0%;
   background-size: 200%;
   text-shadow: 0px 0px 8px #181825;
   box-shadow: 0px 15px 9px #181825;
 }
 
 #aboutme {
-  margin-bottom: 45px;
+  font-size: 30px;
+  margin-bottom: 10px;
   animation: fadein 2s cubic-bezier(0.159, 0.012, 0, 0.987) both 0.4s;
 }
 
 #scrollprompt {
-  margin-top: 15%;
+  margin-top: 8%;
   animation: fadein2 1s cubic-bezier(0.159, 0.012, 0, 0.987) both 3s;
 }
 
@@ -73,11 +78,88 @@ ul {
 #blobwave {
   filter: drop-shadow(0px 15px 8px #11111b);
   margin-bottom: 20px;
-  animation: fadein2 1.5s both 0.2s;
 }
 
 .inview {
-  animation: inview 1s forwards;
+  animation: inview 1s both;
+
+}
+
+.container {
+  width: 100%;
+  height: 1000px;
+}
+
+body::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: '';
+  height: 400%;
+  width: 100%;
+  filter: url(#noise);
+  mix-blend-mode: soft-light;
+  opacity: 80%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+.circle1 {
+  position: absolute;
+  top: -120px;
+  left: 80%;
+  height: 250px;
+  width: 670px;
+  background-color: #f5c2e7;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation-name: circle1;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.circle2 {
+  position: absolute;
+  top: 720px;
+  left: -250px;
+  height: 400px;
+  width: 420px;
+  background-color: #f5c2e7;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation-name: circle2;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#entercontroller:not(.inview) {
+  opacity: 0%;
+}
+
+@keyframes circle1 {
+  0% {
+    opacity: 0%;
+    transform: translate(0px, -100px);
+  }
+
+  100% {
+    opacity: 75%;
+    transform: rotate(25deg)
+  }
+}
+
+@keyframes circle2 {
+  0% {
+    opacity: 0%;
+    transform: translate(-100px, 350px);
+  }
+
+  100% {
+    opacity: 45%;
+  }
 }
 
 @keyframes inview {
@@ -86,6 +168,7 @@ ul {
     filter: blur(5px);
     transform: translateY(-15px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
@@ -99,6 +182,7 @@ ul {
     background-position: 0%, 0%;
     transform: translateY(20px);
   }
+
   to {
     width: 75%;
     background-position: 250%, 0%;
@@ -111,6 +195,7 @@ ul {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
   }
@@ -122,6 +207,7 @@ ul {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
   }
@@ -132,6 +218,7 @@ ul {
     opacity: 0;
     transform: translateY(-20px)
   }
+
   100% {
     opacity: 1;
   }
